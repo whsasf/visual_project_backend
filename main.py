@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-from mongodb import mongodbinit, get_random_lines, insert_many, insert_many_t2, get_t2_lines
+from mongodb import mongodbinit, get_random_lines, insert_many, insert_many_t2, get_t2_lines, clear_total
 from  random import randint
 
 origins = [
@@ -48,6 +48,13 @@ async def create_city_array():
         ele['weight'] = randint(4,12)
     #print(random_city_data )
     return {"random_city_data": random_city_data}
+
+
+# clear 累计呈现 数据库表 :bitoct2
+@app.get("/clear_total")
+async def clearTotal():
+    result = await clear_total()
+    return {"result": result}
 
 
 # add latest city array data to collection: bitoct1

@@ -66,3 +66,6 @@ async def get_t2_lines(lines_bumber):
     for ele in xdata:
         ele.pop('_id')
     return xdata
+
+async def clear_total ():
+    db['bitoct2'].drop()
