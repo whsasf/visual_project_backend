@@ -8,7 +8,7 @@
 #### 1. 克隆到本地: git clone  https://github.com/whsasf/visual_project_backend.git
 #### 2. 安装依赖: pip3 install -r requirements.txt
 #### 3. 安装并启动mongodb，推荐使用docker
-#### 4. 启动后端服务: uvicorn main:app --reload
+#### 4. 启动后端服务: uvicorn main:app --port 8000 --reload
 
 ## 3. 对应前端源代码:
 [前端源代码]()
