@@ -32,7 +32,7 @@ def mongodbinit():
         print('bitoct2 Capped Collections 不存在')
         # 创建
         try:
-            db.create_collection('bitoct2', capped=True, max=700,size=300,codec_options=None)
+            db.create_collection('bitoct2', capped=True, max=700,size=3000,codec_options=None)
         except Exception as e:
             print(e)
 
